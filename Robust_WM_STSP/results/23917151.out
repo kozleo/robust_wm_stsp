@@ -1,0 +1,8 @@
+/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:446: UserWarning: Checkpoint directory _lightning_sandbox/checkpoints/ exists and is not empty.
+  rank_zero_warn(f"Checkpoint directory {dirpath} exists and is not empty.")
+Multi-processing is handled by Slurm.
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+initializing ddp: GLOBAL_RANK: 0, MEMBER: 1/20
+slurmstepd: error: *** JOB 23917151 ON node053 CANCELLED AT 2022-03-29T21:32:02 ***

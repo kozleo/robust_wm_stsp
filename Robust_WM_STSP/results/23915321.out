@@ -1,0 +1,41 @@
+/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:446: UserWarning: Checkpoint directory _lightning_sandbox/checkpoints/ exists and is not empty.
+  rank_zero_warn(f"Checkpoint directory {dirpath} exists and is not empty.")
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+initializing ddp: GLOBAL_RANK: 0, MEMBER: 1/1
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All DDP processes registered. Starting ddp with 1 processes
+----------------------------------------------------------------------------------------------------
+
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2]
+Set SLURM handle signals.
+
+  | Name | Type         | Params
+--------------------------------------
+0 | rnn  | stspRNNLayer | 1.0 M 
+--------------------------------------
+1.0 M     Trainable params
+0         Non-trainable params
+1.0 M     Total params
+4.092     Total estimated model params size (MB)
+Validation sanity check: 0it [00:00, ?it/s]Validation sanity check:   0%|          | 0/2 [00:00<?, ?it/s]/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/torch/utils/data/dataloader.py:478: UserWarning: This DataLoader will create 40 worker processes in total. Our suggested max number of worker in current system is 10, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+                                                              Training: -1it [00:00, ?it/s]Training:   0%|          | 0/80 [00:00<00:00, 16131.94it/s]Epoch 0:   0%|          | 0/80 [00:00<00:00, 4181.76it/s]  Epoch 0:  25%|██▌       | 20/80 [00:20<00:58,  1.03it/s] Epoch 0:  25%|██▌       | 20/80 [00:20<00:58,  1.03it/s, loss=2.06, v_num=2.39e+7]Epoch 0:  50%|█████     | 40/80 [00:33<00:32,  1.24it/s, loss=2.06, v_num=2.39e+7]Epoch 0:  50%|█████     | 40/80 [00:33<00:32,  1.24it/s, loss=0.489, v_num=2.39e+7]Epoch 0:  75%|███████▌  | 60/80 [00:45<00:14,  1.34it/s, loss=0.489, v_num=2.39e+7]Epoch 0:  75%|███████▌  | 60/80 [00:45<00:14,  1.34it/s, loss=0.406, v_num=2.39e+7]Epoch 0: 100%|██████████| 80/80 [00:48<00:00,  1.67it/s, loss=0.406, v_num=2.39e+7]
+Validating: 0it [00:00, ?it/s][A
+Validating:   0%|          | 0/16 [00:00<?, ?it/s][A
+Validating: 100%|██████████| 16/16 [00:09<00:00,  1.76it/s][AEpoch 0: 100%|██████████| 80/80 [00:57<00:00,  1.40it/s, loss=0.406, v_num=2.39e+7, val_acc=0.176]
+                                                           [AEpoch 0:   0%|          | 0/80 [00:00<00:00, 21732.15it/s, loss=0.406, v_num=2.39e+7, val_acc=0.176]Epoch 1:   0%|          | 0/80 [00:00<00:00, 5518.82it/s, loss=0.406, v_num=2.39e+7, val_acc=0.176] Epoch 1:   0%|          | 0/80 [00:16<21:23, 16.04s/it, loss=0.406, v_num=2.39e+7, val_acc=0.176]  Epoch 1:  25%|██▌       | 20/80 [00:22<01:04,  1.07s/it, loss=0.406, v_num=2.39e+7, val_acc=0.176]Epoch 1:  25%|██▌       | 20/80 [00:22<01:04,  1.07s/it, loss=0.399, v_num=2.39e+7, val_acc=0.176]Epoch 1:  50%|█████     | 40/80 [00:42<00:41,  1.05s/it, loss=0.399, v_num=2.39e+7, val_acc=0.176]Epoch 1:  50%|█████     | 40/80 [00:42<00:41,  1.05s/it, loss=0.396, v_num=2.39e+7, val_acc=0.176]Epoch 1:  75%|███████▌  | 60/80 [01:02<00:20,  1.02s/it, loss=0.396, v_num=2.39e+7, val_acc=0.176]Epoch 1:  75%|███████▌  | 60/80 [01:02<00:20,  1.02s/it, loss=0.38, v_num=2.39e+7, val_acc=0.176] Epoch 1: 100%|██████████| 80/80 [01:06<00:00,  1.21it/s, loss=0.38, v_num=2.39e+7, val_acc=0.176]
+Validating: 0it [00:00, ?it/s][A
+Validating:   0%|          | 0/16 [00:00<?, ?it/s][A
+Validating: 100%|██████████| 16/16 [00:08<00:00,  1.82it/s][AEpoch 1: 100%|██████████| 80/80 [01:15<00:00,  1.07it/s, loss=0.374, v_num=2.39e+7, val_acc=0.415]
+                                                           [AEpoch 1:   0%|          | 0/80 [00:00<00:00, 12945.38it/s, loss=0.374, v_num=2.39e+7, val_acc=0.415]Epoch 2:   0%|          | 0/80 [00:00<00:00, 2739.58it/s, loss=0.374, v_num=2.39e+7, val_acc=0.415] Epoch 2:   0%|          | 0/80 [00:10<13:41, 10.27s/it, loss=0.374, v_num=2.39e+7, val_acc=0.415]  Epoch 2:  25%|██▌       | 20/80 [00:23<01:06,  1.11s/it, loss=0.374, v_num=2.39e+7, val_acc=0.415]Epoch 2:  25%|██▌       | 20/80 [00:23<01:06,  1.11s/it, loss=0.339, v_num=2.39e+7, val_acc=0.415]Epoch 2:  50%|█████     | 40/80 [00:44<00:43,  1.09s/it, loss=0.339, v_num=2.39e+7, val_acc=0.415]Epoch 2:  50%|█████     | 40/80 [00:44<00:43,  1.09s/it, loss=0.308, v_num=2.39e+7, val_acc=0.415]Epoch 2:  75%|███████▌  | 60/80 [01:05<00:21,  1.07s/it, loss=0.308, v_num=2.39e+7, val_acc=0.415]Epoch 2:  75%|███████▌  | 60/80 [01:05<00:21,  1.07s/it, loss=0.284, v_num=2.39e+7, val_acc=0.415]Epoch 2: 100%|██████████| 80/80 [01:10<00:00,  1.16it/s, loss=0.284, v_num=2.39e+7, val_acc=0.415]
+Validating: 0it [00:00, ?it/s][A
+Validating:   0%|          | 0/16 [00:00<?, ?it/s][A
+Validating: 100%|██████████| 16/16 [00:08<00:00,  1.87it/s][AEpoch 2: 100%|██████████| 80/80 [01:18<00:00,  1.03it/s, loss=0.275, v_num=2.39e+7, val_acc=0.904]
+                                                           [AEpoch 2:   0%|          | 0/80 [00:00<00:00, 11491.24it/s, loss=0.275, v_num=2.39e+7, val_acc=0.904]Epoch 3:   0%|          | 0/80 [00:00<00:00, 2805.55it/s, loss=0.275, v_num=2.39e+7, val_acc=0.904] Epoch 3:   0%|          | 0/80 [00:11<15:16, 11.46s/it, loss=0.275, v_num=2.39e+7, val_acc=0.904]  Epoch 3:  25%|██▌       | 20/80 [00:24<01:10,  1.18s/it, loss=0.275, v_num=2.39e+7, val_acc=0.904]Epoch 3:  25%|██▌       | 20/80 [00:24<01:10,  1.18s/it, loss=0.17, v_num=2.39e+7, val_acc=0.904] Epoch 3:  50%|█████     | 40/80 [00:45<00:44,  1.12s/it, loss=0.17, v_num=2.39e+7, val_acc=0.904]Epoch 3:  50%|█████     | 40/80 [00:45<00:44,  1.12s/it, loss=0.059, v_num=2.39e+7, val_acc=0.904]Epoch 3:  75%|███████▌  | 60/80 [01:04<00:21,  1.06s/it, loss=0.059, v_num=2.39e+7, val_acc=0.904]Epoch 3:  75%|███████▌  | 60/80 [01:04<00:21,  1.06s/it, loss=0.0191, v_num=2.39e+7, val_acc=0.904]Epoch 3: 100%|██████████| 80/80 [01:08<00:00,  1.19it/s, loss=0.0191, v_num=2.39e+7, val_acc=0.904]
+Validating: 0it [00:00, ?it/s][A
+Validating:   0%|          | 0/16 [00:00<?, ?it/s][A
+Validating: 100%|██████████| 16/16 [00:08<00:00,  1.83it/s][AEpoch 3: 100%|██████████| 80/80 [01:17<00:00,  1.05it/s, loss=0.0159, v_num=2.39e+7, val_acc=1.000]
+                                                           [AEpoch 3: 100%|██████████| 80/80 [01:17<00:00,  1.05it/s, loss=0.0159, v_num=2.39e+7, val_acc=1.000]

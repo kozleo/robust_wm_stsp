@@ -1,0 +1,115 @@
+/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:446: UserWarning: Checkpoint directory _lightning_sandbox/checkpoints/ exists and is not empty.
+  rank_zero_warn(f"Checkpoint directory {dirpath} exists and is not empty.")
+/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/trainer/connectors/accelerator_connector.py:746: UserWarning: You requested multiple GPUs but did not specify a backend, e.g. `Trainer(accelerator="dp"|"ddp"|"ddp2")`. Setting `accelerator="ddp_spawn"` for you.
+  rank_zero_warn(
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:446: UserWarning: Checkpoint directory _lightning_sandbox/checkpoints/ exists and is not empty.
+  rank_zero_warn(f"Checkpoint directory {dirpath} exists and is not empty.")
+/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/trainer/connectors/accelerator_connector.py:746: UserWarning: You requested multiple GPUs but did not specify a backend, e.g. `Trainer(accelerator="dp"|"ddp"|"ddp2")`. Setting `accelerator="ddp_spawn"` for you.
+  rank_zero_warn(
+initializing ddp: GLOBAL_RANK: 1, MEMBER: 2/80
+/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:446: UserWarning: Checkpoint directory _lightning_sandbox/checkpoints/ exists and is not empty.
+  rank_zero_warn(f"Checkpoint directory {dirpath} exists and is not empty.")
+/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/trainer/connectors/accelerator_connector.py:746: UserWarning: You requested multiple GPUs but did not specify a backend, e.g. `Trainer(accelerator="dp"|"ddp"|"ddp2")`. Setting `accelerator="ddp_spawn"` for you.
+  rank_zero_warn(
+initializing ddp: GLOBAL_RANK: 2, MEMBER: 3/80
+/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:446: UserWarning: Checkpoint directory _lightning_sandbox/checkpoints/ exists and is not empty.
+  rank_zero_warn(f"Checkpoint directory {dirpath} exists and is not empty.")
+/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/trainer/connectors/accelerator_connector.py:746: UserWarning: You requested multiple GPUs but did not specify a backend, e.g. `Trainer(accelerator="dp"|"ddp"|"ddp2")`. Setting `accelerator="ddp_spawn"` for you.
+  rank_zero_warn(
+initializing ddp: GLOBAL_RANK: 3, MEMBER: 4/80
+initializing ddp: GLOBAL_RANK: 0, MEMBER: 1/80
+The number of availible GPUS is: 4
+The number of availible GPUS is: 4
+Traceback (most recent call last):
+  File "/om2/user/leokoz8/code/ExpStableDynamics/plos_comp_bio_rebuttal/Robust_WM_STSP/robust_wm_stsp/lightning_main.py", line 96, in <module>
+    trainer.fit(model, dDMTS)
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 552, in fit
+    self._run(model)
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 863, in _run
+    self.accelerator.setup_environment()
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/accelerators/gpu.py", line 30, in setup_environment
+    super().setup_environment()
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/accelerators/accelerator.py", line 76, in setup_environment
+    self.training_type_plugin.setup_environment()
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/plugins/training_type/ddp.py", line 167, in setup_environment
+    self.setup_distributed()
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/plugins/training_type/ddp.py", line 250, in setup_distributed
+    self.init_ddp_connection()
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/plugins/training_type/ddp.py", line 320, in init_ddp_connection
+    torch.distributed.init_process_group(
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/torch/distributed/distributed_c10d.py", line 547, in init_process_group
+    _store_based_barrier(rank, store, timeout)
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/torch/distributed/distributed_c10d.py", line 219, in _store_based_barrier
+    raise RuntimeError(
+RuntimeError: Timed out initializing process group in store based barrier on rank: 1, for key: store_based_barrier_key:1 (world_size=80, worker_count=3, timeout=0:30:00)
+Traceback (most recent call last):
+  File "/om2/user/leokoz8/code/ExpStableDynamics/plos_comp_bio_rebuttal/Robust_WM_STSP/robust_wm_stsp/lightning_main.py", line 96, in <module>
+    trainer.fit(model, dDMTS)
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 552, in fit
+    self._run(model)
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 863, in _run
+    self.accelerator.setup_environment()
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/accelerators/gpu.py", line 30, in setup_environment
+    super().setup_environment()
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/accelerators/accelerator.py", line 76, in setup_environment
+    self.training_type_plugin.setup_environment()
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/plugins/training_type/ddp.py", line 167, in setup_environment
+    self.setup_distributed()
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/plugins/training_type/ddp.py", line 250, in setup_distributed
+    self.init_ddp_connection()
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/plugins/training_type/ddp.py", line 320, in init_ddp_connection
+    torch.distributed.init_process_group(
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/torch/distributed/distributed_c10d.py", line 547, in init_process_group
+    _store_based_barrier(rank, store, timeout)
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/torch/distributed/distributed_c10d.py", line 219, in _store_based_barrier
+    raise RuntimeError(
+RuntimeError: Timed out initializing process group in store based barrier on rank: 3, for key: store_based_barrier_key:1 (world_size=80, worker_count=3, timeout=0:30:00)
+The number of availible GPUS is: 4
+Traceback (most recent call last):
+  File "/om2/user/leokoz8/code/ExpStableDynamics/plos_comp_bio_rebuttal/Robust_WM_STSP/robust_wm_stsp/lightning_main.py", line 96, in <module>
+    trainer.fit(model, dDMTS)
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 552, in fit
+    self._run(model)
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 863, in _run
+    self.accelerator.setup_environment()
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/accelerators/gpu.py", line 30, in setup_environment
+    super().setup_environment()
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/accelerators/accelerator.py", line 76, in setup_environment
+    self.training_type_plugin.setup_environment()
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/plugins/training_type/ddp.py", line 167, in setup_environment
+    self.setup_distributed()
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/plugins/training_type/ddp.py", line 250, in setup_distributed
+    self.init_ddp_connection()
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/plugins/training_type/ddp.py", line 320, in init_ddp_connection
+    torch.distributed.init_process_group(
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/torch/distributed/distributed_c10d.py", line 547, in init_process_group
+    _store_based_barrier(rank, store, timeout)
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/torch/distributed/distributed_c10d.py", line 219, in _store_based_barrier
+    raise RuntimeError(
+RuntimeError: Timed out initializing process group in store based barrier on rank: 2, for key: store_based_barrier_key:1 (world_size=80, worker_count=3, timeout=0:30:00)
+The number of availible GPUS is: 4
+Traceback (most recent call last):
+  File "/om2/user/leokoz8/code/ExpStableDynamics/plos_comp_bio_rebuttal/Robust_WM_STSP/robust_wm_stsp/lightning_main.py", line 96, in <module>
+    trainer.fit(model, dDMTS)
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 552, in fit
+    self._run(model)
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 863, in _run
+    self.accelerator.setup_environment()
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/accelerators/gpu.py", line 30, in setup_environment
+    super().setup_environment()
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/accelerators/accelerator.py", line 76, in setup_environment
+    self.training_type_plugin.setup_environment()
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/plugins/training_type/ddp.py", line 167, in setup_environment
+    self.setup_distributed()
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/plugins/training_type/ddp.py", line 250, in setup_distributed
+    self.init_ddp_connection()
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/plugins/training_type/ddp.py", line 320, in init_ddp_connection
+    torch.distributed.init_process_group(
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/torch/distributed/distributed_c10d.py", line 547, in init_process_group
+    _store_based_barrier(rank, store, timeout)
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/torch/distributed/distributed_c10d.py", line 219, in _store_based_barrier
+    raise RuntimeError(
+RuntimeError: Timed out initializing process group in store based barrier on rank: 0, for key: store_based_barrier_key:1 (world_size=80, worker_count=4, timeout=0:30:00)

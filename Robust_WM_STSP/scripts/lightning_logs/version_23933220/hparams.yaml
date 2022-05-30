@@ -1,0 +1,10 @@
+alpha: 0.15
+alpha_W: 0.15
+dt_ann: 15
+g: 0.9
+hidden_size: 60
+input_size: 11
+lr: 0.01
+nl: none
+output_size: 11
+rnn_type: ah

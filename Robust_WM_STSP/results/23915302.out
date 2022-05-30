@@ -1,0 +1,31 @@
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+initializing ddp: GLOBAL_RANK: 0, MEMBER: 1/1
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All DDP processes registered. Starting ddp with 1 processes
+----------------------------------------------------------------------------------------------------
+
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2]
+Set SLURM handle signals.
+
+  | Name | Type         | Params
+--------------------------------------
+0 | rnn  | stspRNNLayer | 12.3 K
+--------------------------------------
+12.3 K    Trainable params
+0         Non-trainable params
+12.3 K    Total params
+0.049     Total estimated model params size (MB)
+Validation sanity check: 0it [00:00, ?it/s]Validation sanity check:   0%|          | 0/2 [00:00<?, ?it/s]/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/torch/utils/data/dataloader.py:478: UserWarning: This DataLoader will create 40 worker processes in total. Our suggested max number of worker in current system is 10, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+                                                              Training: -1it [00:00, ?it/s]Training:   0%|          | 0/80 [00:00<00:00, 19508.39it/s]Epoch 0:   0%|          | 0/80 [00:00<00:00, 2839.75it/s]  Epoch 0:  25%|██▌       | 20/80 [00:17<00:50,  1.18it/s] Epoch 0:  25%|██▌       | 20/80 [00:17<00:50,  1.18it/s, loss=0.37, v_num=2.39e+7]Epoch 0:  50%|█████     | 40/80 [00:33<00:32,  1.23it/s, loss=0.37, v_num=2.39e+7]Epoch 0:  50%|█████     | 40/80 [00:33<00:32,  1.23it/s, loss=0.319, v_num=2.39e+7]Epoch 0:  75%|███████▌  | 60/80 [00:49<00:16,  1.24it/s, loss=0.319, v_num=2.39e+7]Epoch 0:  75%|███████▌  | 60/80 [00:49<00:16,  1.24it/s, loss=0.313, v_num=2.39e+7]Epoch 0: 100%|██████████| 80/80 [00:52<00:00,  1.54it/s, loss=0.313, v_num=2.39e+7]
+Validating: 0it [00:00, ?it/s][A
+Validating:   0%|          | 0/16 [00:00<?, ?it/s][A
+Validating: 100%|██████████| 16/16 [00:07<00:00,  2.06it/s][AEpoch 0: 100%|██████████| 80/80 [01:00<00:00,  1.34it/s, loss=0.311, v_num=2.39e+7, val_acc=0.576]
+                                                           [AEpoch 0:   0%|          | 0/80 [00:00<00:00, 16644.06it/s, loss=0.311, v_num=2.39e+7, val_acc=0.576]Epoch 1:   0%|          | 0/80 [00:00<00:00, 3890.82it/s, loss=0.311, v_num=2.39e+7, val_acc=0.576] Epoch 1:   0%|          | 0/80 [00:14<19:15, 14.44s/it, loss=0.311, v_num=2.39e+7, val_acc=0.576]  Epoch 1:  25%|██▌       | 20/80 [00:16<00:47,  1.25it/s, loss=0.311, v_num=2.39e+7, val_acc=0.576]Epoch 1:  25%|██▌       | 20/80 [00:16<00:47,  1.25it/s, loss=0.294, v_num=2.39e+7, val_acc=0.576]Epoch 1:  50%|█████     | 40/80 [00:30<00:29,  1.34it/s, loss=0.294, v_num=2.39e+7, val_acc=0.576]Epoch 1:  50%|█████     | 40/80 [00:30<00:29,  1.34it/s, loss=0.236, v_num=2.39e+7, val_acc=0.576]Epoch 1:  75%|███████▌  | 60/80 [00:43<00:14,  1.39it/s, loss=0.236, v_num=2.39e+7, val_acc=0.576]Epoch 1:  75%|███████▌  | 60/80 [00:43<00:14,  1.39it/s, loss=0.169, v_num=2.39e+7, val_acc=0.576]Epoch 1: 100%|██████████| 80/80 [00:47<00:00,  1.71it/s, loss=0.169, v_num=2.39e+7, val_acc=0.576]
+Validating: 0it [00:00, ?it/s][A
+Validating:   0%|          | 0/16 [00:00<?, ?it/s][A
+Validating: 100%|██████████| 16/16 [00:07<00:00,  2.25it/s][AEpoch 1: 100%|██████████| 80/80 [00:54<00:00,  1.48it/s, loss=0.158, v_num=2.39e+7, val_acc=0.945]
+                                                           [AEpoch 1: 100%|██████████| 80/80 [00:54<00:00,  1.47it/s, loss=0.158, v_num=2.39e+7, val_acc=0.945]

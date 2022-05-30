@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+MAIN_PATH="/home/leo/ExpStableDynamics/plos_comp_bio_rebuttal/Robust_WM_STSP/robust_wm_stsp/lightning_main.py"
+
+python ${MAIN_PATH%.cpp} --epochs 100 --nl 'tanh' --rnn_type 'vRNN' --lr 1e-3 --hs 100 --act_reg 1e-4
+
+#python ${MAIN_PATH%.cpp} --epochs 100 --nl 'relu' --rnn_type 'vRNN' --lr 1e-3 --hs 100 --act_reg 2 --param_reg 1e-4
+
+#python ${MAIN_PATH%.cpp} --epochs 100 --nl 'none' --rnn_type 'ah' --lr .01 --hs 50 --gamma .1
+
+#ython ${MAIN_PATH%.cpp} --epochs 100 --nl 'relu' --rnn_type 'stsp' --lr .02 --hs 1000
+
+#TODO:
+    #Add functionality to train without storing variables unessesarily
+    #Need to have it so that can get those variables when testing

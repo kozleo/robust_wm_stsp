@@ -1,0 +1,24 @@
+/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:446: UserWarning: Checkpoint directory _lightning_sandbox/checkpoints/ exists and is not empty.
+  rank_zero_warn(f"Checkpoint directory {dirpath} exists and is not empty.")
+/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/trainer/connectors/accelerator_connector.py:746: UserWarning: You requested multiple GPUs but did not specify a backend, e.g. `Trainer(accelerator="dp"|"ddp"|"ddp2")`. Setting `accelerator="ddp_spawn"` for you.
+  rank_zero_warn(
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:446: UserWarning: Checkpoint directory _lightning_sandbox/checkpoints/ exists and is not empty.
+  rank_zero_warn(f"Checkpoint directory {dirpath} exists and is not empty.")
+/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/trainer/connectors/accelerator_connector.py:746: UserWarning: You requested multiple GPUs but did not specify a backend, e.g. `Trainer(accelerator="dp"|"ddp"|"ddp2")`. Setting `accelerator="ddp_spawn"` for you.
+  rank_zero_warn(
+initializing ddp: GLOBAL_RANK: 1, MEMBER: 2/80
+/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:446: UserWarning: Checkpoint directory _lightning_sandbox/checkpoints/ exists and is not empty.
+  rank_zero_warn(f"Checkpoint directory {dirpath} exists and is not empty.")
+/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/trainer/connectors/accelerator_connector.py:746: UserWarning: You requested multiple GPUs but did not specify a backend, e.g. `Trainer(accelerator="dp"|"ddp"|"ddp2")`. Setting `accelerator="ddp_spawn"` for you.
+  rank_zero_warn(
+initializing ddp: GLOBAL_RANK: 2, MEMBER: 3/80
+/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:446: UserWarning: Checkpoint directory _lightning_sandbox/checkpoints/ exists and is not empty.
+  rank_zero_warn(f"Checkpoint directory {dirpath} exists and is not empty.")
+/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/trainer/connectors/accelerator_connector.py:746: UserWarning: You requested multiple GPUs but did not specify a backend, e.g. `Trainer(accelerator="dp"|"ddp"|"ddp2")`. Setting `accelerator="ddp_spawn"` for you.
+  rank_zero_warn(
+initializing ddp: GLOBAL_RANK: 3, MEMBER: 4/80
+initializing ddp: GLOBAL_RANK: 0, MEMBER: 1/80
+slurmstepd: error: *** JOB 23916874 ON node090 CANCELLED AT 2022-03-29T21:05:09 ***

@@ -1,0 +1,19 @@
+/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:446: UserWarning: Checkpoint directory _lightning_sandbox/checkpoints/ exists and is not empty.
+  rank_zero_warn(f"Checkpoint directory {dirpath} exists and is not empty.")
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+Set SLURM handle signals.
+
+  | Name | Type         | Params
+--------------------------------------
+0 | rnn  | aHiHRNNLayer | 261 K 
+--------------------------------------
+261 K     Trainable params
+0         Non-trainable params
+261 K     Total params
+1.046     Total estimated model params size (MB)
+The number of availible GPUS is: 1
+Validation sanity check: 0it [00:00, ?it/s]Validation sanity check:   0%|          | 0/2 [00:00<?, ?it/s]/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/torch/utils/data/dataloader.py:478: UserWarning: This DataLoader will create 40 worker processes in total. Our suggested max number of worker in current system is 20, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+                                                              Training: -1it [00:00, ?it/s]Training:   0%|          | 0/320 [00:00<00:00, 41527.76it/s]Epoch 0:   0%|          | 0/320 [00:00<00:00, 4064.25it/s]  Epoch 0:   6%|▋         | 20/320 [37:30<8:55:54, 107.18s/it]Epoch 0:   6%|▋         | 20/320 [37:30<8:55:54, 107.18s/it, loss=nan, v_num=2.39e+7]slurmstepd: error: *** JOB 23931553 ON node081 CANCELLED AT 2022-03-31T00:15:03 ***

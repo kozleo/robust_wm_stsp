@@ -1,0 +1,103 @@
+/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:446: UserWarning: Checkpoint directory _lightning_sandbox/checkpoints/ exists and is not empty.
+  rank_zero_warn(f"Checkpoint directory {dirpath} exists and is not empty.")
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+initializing ddp: GLOBAL_RANK: 0, MEMBER: 1/1
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All DDP processes registered. Starting ddp with 1 processes
+----------------------------------------------------------------------------------------------------
+
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+Set SLURM handle signals.
+
+  | Name | Type         | Params
+--------------------------------------
+0 | rnn  | aHiHRNNLayer | 261 K 
+--------------------------------------
+261 K     Trainable params
+0         Non-trainable params
+261 K     Total params
+1.046     Total estimated model params size (MB)
+The number of availible GPUS is: 1
+Validation sanity check: 0it [00:00, ?it/s]Validation sanity check:   0%|          | 0/2 [00:00<?, ?it/s]/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/torch/utils/data/dataloader.py:478: UserWarning: This DataLoader will create 40 worker processes in total. Our suggested max number of worker in current system is 10, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+                                                              Training: -1it [00:00, ?it/s]Training:   0%|          | 0/80 [00:00<00:00, 12483.05it/s]Epoch 0:   0%|          | 0/80 [00:00<00:00, 2972.58it/s]  Traceback (most recent call last):
+  File "/om2/user/leokoz8/code/ExpStableDynamics/plos_comp_bio_rebuttal/Robust_WM_STSP/robust_wm_stsp/lightning_main.py", line 96, in <module>
+    trainer.fit(model, dDMTS)
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 552, in fit
+    self._run(model)
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 917, in _run
+    self._dispatch()
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 985, in _dispatch
+    self.accelerator.start_training(self)
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/accelerators/accelerator.py", line 92, in start_training
+    self.training_type_plugin.start_training(trainer)
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/plugins/training_type/training_type_plugin.py", line 161, in start_training
+    self._results = trainer.run_stage()
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 995, in run_stage
+    return self._run_train()
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1044, in _run_train
+    self.fit_loop.run()
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/loops/base.py", line 111, in run
+    self.advance(*args, **kwargs)
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/loops/fit_loop.py", line 200, in advance
+    epoch_output = self.epoch_loop.run(train_dataloader)
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/loops/base.py", line 111, in run
+    self.advance(*args, **kwargs)
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/loops/epoch/training_epoch_loop.py", line 130, in advance
+    batch_output = self.batch_loop.run(batch, self.iteration_count, self._dataloader_idx)
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/loops/batch/training_batch_loop.py", line 100, in run
+    super().run(batch, batch_idx, dataloader_idx)
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/loops/base.py", line 111, in run
+    self.advance(*args, **kwargs)
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/loops/batch/training_batch_loop.py", line 147, in advance
+    result = self._run_optimization(batch_idx, split_batch, opt_idx, optimizer)
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/loops/batch/training_batch_loop.py", line 201, in _run_optimization
+    self._optimizer_step(optimizer, opt_idx, batch_idx, closure)
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/loops/batch/training_batch_loop.py", line 395, in _optimizer_step
+    model_ref.optimizer_step(
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/core/lightning.py", line 1618, in optimizer_step
+    optimizer.step(closure=optimizer_closure)
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/core/optimizer.py", line 209, in step
+    self.__optimizer_step(*args, closure=closure, profiler_name=profiler_name, **kwargs)
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/core/optimizer.py", line 129, in __optimizer_step
+    trainer.accelerator.optimizer_step(optimizer, self._optimizer_idx, lambda_closure=closure, **kwargs)
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/accelerators/accelerator.py", line 296, in optimizer_step
+    self.run_optimizer_step(optimizer, opt_idx, lambda_closure, **kwargs)
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/accelerators/accelerator.py", line 303, in run_optimizer_step
+    self.training_type_plugin.optimizer_step(optimizer, lambda_closure=lambda_closure, **kwargs)
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/plugins/training_type/training_type_plugin.py", line 226, in optimizer_step
+    optimizer.step(closure=lambda_closure, **kwargs)
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/torch/optim/optimizer.py", line 88, in wrapper
+    return func(*args, **kwargs)
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/torch/autograd/grad_mode.py", line 28, in decorate_context
+    return func(*args, **kwargs)
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/torch/optim/adam.py", line 66, in step
+    loss = closure()
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/loops/batch/training_batch_loop.py", line 235, in _training_step_and_backward_closure
+    result = self.training_step_and_backward(split_batch, batch_idx, opt_idx, optimizer, hiddens)
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/loops/batch/training_batch_loop.py", line 536, in training_step_and_backward
+    result = self._training_step(split_batch, batch_idx, opt_idx, hiddens)
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/loops/batch/training_batch_loop.py", line 306, in _training_step
+    training_step_output = self.trainer.accelerator.training_step(step_kwargs)
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/accelerators/accelerator.py", line 193, in training_step
+    return self.training_type_plugin.training_step(*step_kwargs.values())
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/plugins/training_type/ddp.py", line 384, in training_step
+    return self.model(*args, **kwargs)
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 799, in forward
+    output = self.module(*inputs[0], **kwargs[0])
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/overrides/base.py", line 82, in forward
+    output = self.module.training_step(*inputs, **kwargs)
+  File "/rdma/vast-rdma/vast/millerlab/leokoz8/code/ExpStableDynamics/plos_comp_bio_rebuttal/Robust_WM_STSP/robust_wm_stsp/lightning_networks.py", line 60, in training_step
+    out_readout, out_hidden, _, _ = self.rnn(inp)
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/rdma/vast-rdma/vast/millerlab/leokoz8/code/ExpStableDynamics/plos_comp_bio_rebuttal/Robust_WM_STSP/robust_wm_stsp/lightning_networks.py", line 398, in forward
+    fW = -K * hebb_term - (self.gamma) * W_state
+RuntimeError: CUDA out of memory. Tried to allocate 246.00 MiB (GPU 0; 23.65 GiB total capacity; 22.31 GiB already allocated; 109.50 MiB free; 22.52 GiB reserved in total by PyTorch)

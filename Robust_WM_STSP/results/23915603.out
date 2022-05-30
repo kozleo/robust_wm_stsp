@@ -1,0 +1,9 @@
+/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:446: UserWarning: Checkpoint directory _lightning_sandbox/checkpoints/ exists and is not empty.
+  rank_zero_warn(f"Checkpoint directory {dirpath} exists and is not empty.")
+The number of availible GPUS is: 4
+Traceback (most recent call last):
+  File "/om2/user/leokoz8/code/ExpStableDynamics/plos_comp_bio_rebuttal/Robust_WM_STSP/robust_wm_stsp/lightning_main.py", line 86, in <module>
+    trainer = Trainer(
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/trainer/connectors/env_vars_connector.py", line 40, in insert_env_defaults
+    return fn(self, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'strategy'

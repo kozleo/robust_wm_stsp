@@ -1,0 +1,4 @@
+usage: lightning_main.py [-h] [--rnn_type RNN_TYPE] [--nl NL] [--hs HS]
+                         [--gamma GAMMA] [--lr LR] [--act_reg ACT_REG]
+                         [--param_reg PARAM_REG] [--epochs EPOCHS]
+lightning_main.py: error: argument --gamma: invalid float value: '1/200'

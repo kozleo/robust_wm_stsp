@@ -1,0 +1,36 @@
+/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:446: UserWarning: Checkpoint directory _lightning_sandbox/checkpoints/ exists and is not empty.
+  rank_zero_warn(f"Checkpoint directory {dirpath} exists and is not empty.")
+/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/trainer/connectors/accelerator_connector.py:792: UserWarning: You are running on single node with no parallelization, so distributed has no effect.
+  rank_zero_warn("You are running on single node with no parallelization, so distributed has no effect.")
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+initializing ddp: GLOBAL_RANK: 0, MEMBER: 1/1
+----------------------------------------------------------------------------------------------------
+distributed_backend=gloo
+All DDP processes registered. Starting ddp with 1 processes
+----------------------------------------------------------------------------------------------------
+
+The number of availible GPUS is: 1
+Traceback (most recent call last):
+  File "/om2/user/leokoz8/code/ExpStableDynamics/plos_comp_bio_rebuttal/Robust_WM_STSP/robust_wm_stsp/lightning_main.py", line 95, in <module>
+    trainer.fit(model, dDMTS)
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 552, in fit
+    self._run(model)
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 911, in _run
+    self._pre_dispatch()
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 939, in _pre_dispatch
+    self.accelerator.pre_dispatch(self)
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/accelerators/accelerator.py", line 104, in pre_dispatch
+    self.training_type_plugin.pre_dispatch()
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/plugins/training_type/ddp.py", line 339, in pre_dispatch
+    self.configure_ddp()
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/plugins/training_type/ddp.py", line 303, in configure_ddp
+    self._model = DistributedDataParallel(
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 498, in __init__
+    self._sync_params_and_buffers(authoritative_rank=0)
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 514, in _sync_params_and_buffers
+    self._distributed_broadcast_coalesced(
+  File "/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 1278, in _distributed_broadcast_coalesced
+    dist._broadcast_coalesced(
+RuntimeError: Invalid scalar type

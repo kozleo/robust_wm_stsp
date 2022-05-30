@@ -1,0 +1,61 @@
+#!/usr/bin/env bash
+
+MAIN_PATH="/home/leo/ExpStableDynamics/plos_comp_bio_rebuttal/Robust_WM_STSP/robust_wm_stsp/lightning_main.py"
+
+declare -a act_regs=(0.0 0.5 1 1.5 2 2.5)
+declare -a param_regs=(1e-6 1e-5 1e-4 1e-3 1e-2)
+declare -a gammas=(.001 .01 0.1 1)
+
+# for hidden_size in {100..1000..100}
+# do
+#     for act_reg in "${act_regs[@]}"
+#     do 
+#         for param_reg in "${param_regs[@]}"
+#         do
+#             echo "$hidden_size"
+#             echo "$act_reg"
+#             echo "$param_reg" 
+
+#             python ${MAIN_PATH%.cpp} --epochs 100 --nl 'tanh' --rnn_type 'vRNN' --lr 1e-3 --hs $hidden_size --act_reg $act_reg --param_reg $param_reg
+#             python ${MAIN_PATH%.cpp} --epochs 100 --nl 'relu' --rnn_type 'vRNN' --lr 1e-3 --hs $hidden_size --act_reg $act_reg --param_reg $param_reg
+#             python ${MAIN_PATH%.cpp} --epochs 100 --nl 'relu' --rnn_type 'stsp' --lr .02 --hs $hidden_size --act_reg $act_reg --param_reg $param_reg
+    
+#         done
+#     done
+# done
+
+for hidden_size in {10..100..10}
+do
+    for act_reg in "${act_regs[@]}"
+    do 
+        for param_reg in "${param_regs[@]}"
+        do
+
+            for gamma in "${gammas[@]}"
+            do
+
+                echo "$hidden_size"
+                echo "$act_reg"
+                echo "$param_reg" 
+                echo "$gamma" 
+
+                python ${MAIN_PATH%.cpp} --epochs 100 --nl 'none' --rnn_type 'ah' --lr .01 --hs $hidden_size --gamma $gamma --act_reg $act_reg --param_reg $param_reg
+
+             done
+    
+        done
+    done
+done
+
+
+
+
+#python ${MAIN_PATH%.cpp} --epochs 100 --nl 'relu' --rnn_type 'vRNN' --lr 1e-3 --hs 100 --act_reg 2 --param_reg 1e-4
+
+#python ${MAIN_PATH%.cpp} --epochs 100 --nl 'none' --rnn_type 'ah' --lr .01 --hs 50 --gamma .1
+
+#ython ${MAIN_PATH%.cpp} --epochs 100 --nl 'relu' --rnn_type 'stsp' --lr .02 --hs 1000
+
+#TODO:
+    #Add functionality to train without storing variables unessesarily
+    #Need to have it so that can get those variables when testing

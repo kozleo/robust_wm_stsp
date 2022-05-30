@@ -1,0 +1,10 @@
+alpha: 0.05
+alpha_W: 0.05
+dt_ann: 5
+g: 0.9
+hidden_size: 500
+input_size: 11
+lr: 0.001
+nl: tanh
+output_size: 11
+rnn_type: vRNN

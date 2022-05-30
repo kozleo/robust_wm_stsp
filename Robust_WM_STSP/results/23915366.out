@@ -1,0 +1,29 @@
+/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:446: UserWarning: Checkpoint directory _lightning_sandbox/checkpoints/ exists and is not empty.
+  rank_zero_warn(f"Checkpoint directory {dirpath} exists and is not empty.")
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+initializing ddp: GLOBAL_RANK: 0, MEMBER: 1/1
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All DDP processes registered. Starting ddp with 1 processes
+----------------------------------------------------------------------------------------------------
+
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2]
+Set SLURM handle signals.
+
+  | Name | Type         | Params
+--------------------------------------
+0 | rnn  | aHiHRNNLayer | 12.3 K
+--------------------------------------
+12.3 K    Trainable params
+0         Non-trainable params
+12.3 K    Total params
+0.049     Total estimated model params size (MB)
+Validation sanity check: 0it [00:00, ?it/s]Validation sanity check:   0%|          | 0/2 [00:00<?, ?it/s]/om/user/leokoz8/envs/rwmstsp/lib/python3.8/site-packages/torch/utils/data/dataloader.py:478: UserWarning: This DataLoader will create 40 worker processes in total. Our suggested max number of worker in current system is 10, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+                                                              Training: -1it [00:00, ?it/s]Training:   0%|          | 0/80 [00:00<00:00, 19328.59it/s]Epoch 0:   0%|          | 0/80 [00:00<00:00, 4169.29it/s]  Epoch 0:  25%|██▌       | 20/80 [00:18<00:52,  1.14it/s] Epoch 0:  25%|██▌       | 20/80 [00:18<00:52,  1.14it/s, loss=0.4, v_num=2.39e+7]Epoch 0:  50%|█████     | 40/80 [00:33<00:32,  1.22it/s, loss=0.4, v_num=2.39e+7]Epoch 0:  50%|█████     | 40/80 [00:33<00:32,  1.22it/s, loss=0.311, v_num=2.39e+7]Epoch 0:  75%|███████▌  | 60/80 [00:48<00:15,  1.27it/s, loss=0.311, v_num=2.39e+7]Epoch 0:  75%|███████▌  | 60/80 [00:48<00:15,  1.27it/s, loss=0.225, v_num=2.39e+7]Epoch 0: 100%|██████████| 80/80 [00:51<00:00,  1.58it/s, loss=0.225, v_num=2.39e+7]
+Validating: 0it [00:00, ?it/s][A
+Validating:   0%|          | 0/16 [00:00<?, ?it/s][A
+Validating: 100%|██████████| 16/16 [00:10<00:00,  1.59it/s][AEpoch 0: 100%|██████████| 80/80 [01:01<00:00,  1.31it/s, loss=0.213, v_num=2.39e+7, val_acc=0.773]
+                                                           [AEpoch 0:   0%|          | 0/80 [00:00<00:00, 13315.25it/s, loss=0.213, v_num=2.39e+7, val_acc=0.773]Epoch 1:   0%|          | 0/80 [00:00<00:00, 2916.76it/s, loss=0.213, v_num=2.39e+7, val_acc=0.773] slurmstepd: error: *** JOB 23915366 ON node090 CANCELLED AT 2022-03-29T16:08:36 ***

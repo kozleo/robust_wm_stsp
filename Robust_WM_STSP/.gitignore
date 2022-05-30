@@ -1,0 +1,3 @@
+*.egg-info
+scripts/_lightning_sandbox/checkpoints
+results/trained_networks

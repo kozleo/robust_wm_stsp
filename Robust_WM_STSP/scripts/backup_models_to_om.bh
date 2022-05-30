@@ -1,0 +1,7 @@
+#!/bin/bash
+
+TARGET_PATH="leokoz8@openmind7.mit.edu:/om2/user/leokoz8/code/ExpStableDynamics/plos_comp_bio_rebuttal/Robust_WM_STSP/data/"
+SOURCE_PATH="/home/leo/ExpStableDynamics/plos_comp_bio_rebuttal/Robust_WM_STSP/scripts/_lightning_sandbox/checkpoints"
+
+
+rsync -avh -r -P -t ${SOURCE_PATH%.cpp} ${TARGET_PATH%.cpp}
