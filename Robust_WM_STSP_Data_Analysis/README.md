@@ -1,6 +1,6 @@
 Code used for data analysis in Kozachkov et al. (2022), submitted to PLoS Computational Biology. 
 
-"Robust Working Memory through Short-Term Synaptic Plasticity"
+"Robust and Brain-Like Working Memory through Short-Term Synaptic Plasticity"
 
 Conda environment used for analysis is located in "environment.yml".
 
